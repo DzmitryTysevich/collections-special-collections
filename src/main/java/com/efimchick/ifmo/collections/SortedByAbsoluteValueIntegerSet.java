@@ -1,6 +1,10 @@
 package com.efimchick.ifmo.collections;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.Collection;
+import java.util.Comparator;
 
 class SortedByAbsoluteValueIntegerSet implements Set<Integer> {
     private final Set<Integer> sortedIntegers = new TreeSet<>(new IntegerComparator());

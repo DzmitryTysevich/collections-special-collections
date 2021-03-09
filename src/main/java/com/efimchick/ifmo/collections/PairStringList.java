@@ -1,6 +1,11 @@
 package com.efimchick.ifmo.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Collection;
+import java.util.ListIterator;
 
 class PairStringList implements List<String> {
     private final List<String> pairList = new ArrayList<>();
@@ -139,16 +144,16 @@ class PairStringList implements List<String> {
 
     @Override
     public ListIterator<String> listIterator() {
-        return null;
+        return pairList.listIterator();
     }
 
     @Override
     public ListIterator<String> listIterator(int index) {
-        return null;
+        return pairList.listIterator(index);
     }
 
     @Override
     public List<String> subList(int fromIndex, int toIndex) {
-        return null;
+        return pairList.subList(fromIndex, toIndex);
     }
 }

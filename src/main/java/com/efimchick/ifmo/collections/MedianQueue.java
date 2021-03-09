@@ -1,8 +1,9 @@
 package com.efimchick.ifmo.collections;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedList;
 
-class MedianQueue implements Queue<Integer> {
+class MedianQueue extends LinkedList<Integer> {
     private final LinkedList<Integer> medianQueue = new LinkedList<>();
 
     @Override
@@ -21,18 +22,8 @@ class MedianQueue implements Queue<Integer> {
     }
 
     @Override
-    public Iterator<Integer> iterator() {
-        return medianQueue.iterator();
-    }
-
-    @Override
     public Object[] toArray() {
         return new Object[0];
-    }
-
-    @Override
-    public <T> T[] toArray(T[] a) {
-        return null;
     }
 
     @Override
@@ -42,26 +33,6 @@ class MedianQueue implements Queue<Integer> {
 
     @Override
     public boolean remove(Object o) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends Integer> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
         return false;
     }
 
@@ -103,10 +74,11 @@ class MedianQueue implements Queue<Integer> {
         clear();
         int initialSize = tempList.size();
         for (int i = 0; i < initialSize; i++) {
-            if (isEven(i))
+            if (isEven(i)) {
                 medianQueue.addFirst(tempList.pollLast());
-            else
+            } else {
                 medianQueue.addFirst(tempList.pollFirst());
+            }
         }
     }
 
