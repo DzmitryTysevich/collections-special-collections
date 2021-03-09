@@ -1,6 +1,7 @@
 package com.efimchick.ifmo.collections;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.Collection;
@@ -16,7 +17,7 @@ class SortedByAbsoluteValueIntegerSet implements Set<Integer> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -51,7 +52,7 @@ class SortedByAbsoluteValueIntegerSet implements Set<Integer> {
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -62,16 +63,17 @@ class SortedByAbsoluteValueIntegerSet implements Set<Integer> {
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
     public void clear() {
+        throw new NoSuchElementException();
     }
 
     private static class IntegerComparator implements Comparator<Integer> {

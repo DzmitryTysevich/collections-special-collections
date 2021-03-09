@@ -1,9 +1,13 @@
 package com.efimchick.ifmo.collections;
 
+import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
+import java.util.Queue;
 
-class MedianQueue extends LinkedList<Integer> {
+class MedianQueue implements Queue<Integer> {
     private final LinkedList<Integer> medianQueue = new LinkedList<>();
 
     @Override
@@ -13,32 +17,72 @@ class MedianQueue extends LinkedList<Integer> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public Iterator<Integer> iterator() {
+        throw new NoSuchElementException();
     }
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        throw new NoSuchElementException();
     }
 
     @Override
     public boolean add(Integer integer) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
     public boolean remove(Object o) {
-        return false;
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends Integer> c) {
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        throw new NoSuchElementException();
     }
 
     @Override
     public void clear() {
         medianQueue.clear();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        throw new NoSuchElementException();
+    }
+
+    @Override
+    public int hashCode() {
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -50,7 +94,7 @@ class MedianQueue extends LinkedList<Integer> {
 
     @Override
     public Integer remove() {
-        return null;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -60,7 +104,7 @@ class MedianQueue extends LinkedList<Integer> {
 
     @Override
     public Integer element() {
-        return null;
+        throw new NoSuchElementException();
     }
 
     @Override

@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Collection;
 import java.util.ListIterator;
+import java.util.NoSuchElementException;
 
 class PairStringList implements List<String> {
     private final List<String> pairList = new ArrayList<>();
@@ -17,12 +18,12 @@ class PairStringList implements List<String> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -55,7 +56,7 @@ class PairStringList implements List<String> {
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -82,12 +83,12 @@ class PairStringList implements List<String> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -134,12 +135,12 @@ class PairStringList implements List<String> {
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        throw new NoSuchElementException();
     }
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        throw new NoSuchElementException();
     }
 
     @Override
@@ -154,6 +155,6 @@ class PairStringList implements List<String> {
 
     @Override
     public List<String> subList(int fromIndex, int toIndex) {
-        return pairList.subList(fromIndex, toIndex);
+        throw new NoSuchElementException();
     }
 }
